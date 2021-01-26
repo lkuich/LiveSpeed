@@ -10,7 +10,7 @@ import React from 'react';
 import {SafeAreaView, View, StatusBar} from 'react-native';
 import Tts from 'react-native-tts';
 
-import {Speedometer} from './components/Speedometer';
+import {Main} from './components/Main';
 
 const App: () => React$Node = () => {
   Tts.setIgnoreSilentSwitch('ignore');
@@ -18,10 +18,8 @@ const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <View padding={24}>
-          <Speedometer />
-        </View>
+      <SafeAreaView style={{flex: 1}}>
+        <Main />
       </SafeAreaView>
     </>
   );
